@@ -1,3 +1,7 @@
+from Veiculos import Carro
+import Veiculos
+
+
 def leia_int(msg):
     while True:
         try:

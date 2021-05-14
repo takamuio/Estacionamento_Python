@@ -4,6 +4,7 @@ from Menu import Consulta_Vaga
 from Menu import Consulta_Geral
 from time import sleep
 import Interface
+import Veiculos
 
 
 def principal():
@@ -11,7 +12,8 @@ def principal():
         Interface.cabecalho('MENU PRINCIPAL')
         resposta = Interface.menu(['Entrada', 'Saida', 'Consulta de vaga', 'Consulta geral', 'Sair'])
         if resposta == 1:
-            Entrada.menu_principal()
+            if len(Veiculos.vagas) < Veiculos.quantidade_maxima:
+                Entrada.menu_principal()
         elif resposta == 2:
             Saida.menu_principal()
         elif resposta == 3:
